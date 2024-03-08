@@ -34,7 +34,7 @@ public interface JDBCTask2Interface {
      * @param searchString A string that will be used to filter the primary titles on
      * @return A collection of strings of the resulting job categories
      */
-    public Collection<String> getJobCategoriesFromTitles(String searchString);
+    public Collection<String> getJobCategoriesFromTitles(String searchString) throws SQLException, ClassNotFoundException;
         // @TODO: Implement this method. Use parameterized prepared statements for the query!
 
 
@@ -43,7 +43,7 @@ public interface JDBCTask2Interface {
      * @param genre A string that specifies the genre to be queried on
      * @return A double corresponding to the average runtime of the specified genre
      */
-    public double getAverageRuntimeOfGenre(String genre);
+    public double getAverageRuntimeOfGenre(String genre) throws SQLException, ClassNotFoundException;
         // @TODO: Implement this method. Use parameterized prepared statements for the query!
 
     /**
@@ -51,7 +51,7 @@ public interface JDBCTask2Interface {
      * @param actorFullname A string of the person's full name
      * @return A collection of strings corresponding to the character names the provided person has played
      */
-    public Collection<String> getPlayedCharacters(String actorFullname);
+    public Collection<String> getPlayedCharacters(String actorFullname) throws SQLException, ClassNotFoundException;
         // @TODO: Implement this method. Use parameterized prepared statements for the query!
     
 
