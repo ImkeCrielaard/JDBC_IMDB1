@@ -1,6 +1,7 @@
 package tudelft.wis.idm_tasks.basicJDBC.interfaces;
 
 import java.sql.Connection;
+import java.sql.SQLException;
 import java.util.Collection;
 
 // Add other necessary imports here
@@ -16,7 +17,7 @@ public interface JDBCTask2Interface {
      * Establishes the connection to the PostgreSQL database.
      * @return The connection object. If a connection couldn't be established, returns null
      */
-    public Connection getConnection();
+    public Connection getConnection() throws ClassNotFoundException, SQLException;
         // @TODO: Implement this method.
 
 
@@ -25,7 +26,7 @@ public interface JDBCTask2Interface {
      * @param year A specific start year to query the titles on
      * @return A collection of strings of the resulting primary titles
      */
-    public Collection<String> getTitlesPerYear(int year);
+    public Collection<String> getTitlesPerYear(int year) throws SQLException, ClassNotFoundException;
         // @TODO: Implement this method. Use parameterized prepared statements for the query!
 
     /**
